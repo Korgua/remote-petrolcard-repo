@@ -13,11 +13,12 @@ var loginVerticalMiddle = function(h,w){
 	,	$loginHeight = $login.height()
 	,	$loginMarginTop = (h-$loginHeight)/2
 	;
+	console.log("h: "+h+", margin-top: "+$loginMarginTop);
 	//$("#dimension").text(w+'x'+h+'| marginTop: '+$marginTop+'| loginHeight: '+$loginHeight);
 	/*if(const_height != $loginHeight && const_height!=0)
 		const_height = $loginHeight;
 		else*/
-			$login.css('margin-top',$loginMarginTop);
+			$login.css('padding-top',$loginMarginTop);
 	//console.log($('div.one-third.column').outerHeight(true));
 }
 

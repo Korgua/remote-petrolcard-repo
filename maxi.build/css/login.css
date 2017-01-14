@@ -140,9 +140,16 @@ input.login:focus {
   font-weight: 700;
 }
 
+div.banner {
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 499px) {
   #login {
-    paddin: 0;
+    padding: 0;
   }
 
   img.user-pic {
