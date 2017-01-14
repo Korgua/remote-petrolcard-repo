@@ -1,0 +1,14 @@
+.g-recaptcha {
+	> div{
+		width:100% !important;
+		background-color: red;
+		text-align: right;
+	}
+}
+iframe{
+	text-align:right;
+}
+
+.rc-anchor-normal-footer{
+	display: none !important;
+}

@@ -1,20 +1,75 @@
+a {
+  color: #0d89b0;
+}
+
+a:hover {
+  color: #1bbcee;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+}
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover {
+  background-color: #63d1f3;
+  border-color: #33C3F0;
+}
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  background-color: #096481;
+  border-color: #33C3F0;
+}
+
+.g-recaptcha > div {
+  width: 100% !important;
+  background-color: red;
+  text-align: right;
+}
+
+iframe {
+  text-align: right;
+}
+
+.rc-anchor-normal-footer {
+  display: none !important;
+}
+
 body {
   background-color: #63d1f3;
 }
 
 .container {
-  /*position: relative;*/
   margin: 0 auto !important;
   text-align: center;
   padding: 0;
   max-height: 100%;
   max-width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
 
 #login {
@@ -25,19 +80,6 @@ body {
 }
 
 input.login:focus {
-  border-color: #33C3F0 !important;
-}
-
-.button.button-primary {
-  background-color: #33C3F0 !important;
-  border-color: #33C3F0 !important;
-}
-.button.button-primary:hover {
-  background-color: #63d1f3 !important;
-  border-color: #33C3F0 !important;
-}
-.button.button-primary:focus {
-  background-color: #096481 !important;
   border-color: #33C3F0 !important;
 }
 
@@ -58,9 +100,6 @@ input.login:focus {
 }
 
 .user-pic-holder {
-  /*
-  min-height:12em;
-  */
   margin-top: 1em;
 }
 
@@ -68,6 +107,12 @@ input.login:focus {
   width: 90%;
   margin: 0 auto;
   margin-top: 1em;
+}
+
+.row.login.recover {
+  margin: 0;
+  padding: 0;
+  text-align: right;
 }
 
 .user-pic {

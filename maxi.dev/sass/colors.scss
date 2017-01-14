@@ -1,0 +1,46 @@
+//$main_color: #006600;
+$main_color: #33C3F0;
+//$main_color: rgb(204,0,0);
+$login_button_color: #FFF;
+$login_form_bg: #fff;
+$login_form_shadow: rgba(0,0,0,0.44);
+$login_user_logo_bg: rgba(120,120,120,.9);
+$login_user_logo_border: $main_color;
+$body_bg: lighten($main_color,10%);
+
+$warning-color: red;
+
+a {
+  color: darken($main_color,20%); }
+a:hover {
+  color: darken($main_color,5%); }
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary{
+	background-color: $main_color;
+	border-color:	$main_color;
+	&:hover{
+		background-color: lighten($main_color,10%);
+		border-color:	$main_color;
+	}
+	&:focus{
+		background-color: darken($main_color,30%);
+		border-color:	$main_color;
+	}
+}
