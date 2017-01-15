@@ -9,7 +9,7 @@ $login_user_logo_border: $main_color;
 $body_bg: lighten($main_color,10%);
 
 
-$warning-color: green;
+$warning-color: rgba(255, 66, 66, 1);
 
 a {
   color: darken($main_color,20%); }

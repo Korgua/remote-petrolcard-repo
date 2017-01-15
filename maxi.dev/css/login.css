@@ -160,7 +160,7 @@ body {
 }
 
 #login {
-  width: 90%;
+  width: 98%;
   margin: 0 auto;
   max-width: 40em;
   text-align: center;
@@ -218,8 +218,8 @@ input.login:focus {
 }
 
 .error {
-  border: 1px solid green !important;
-  color: green !important;
+  border: 1px solid #ff4242 !important;
+  color: #ff4242 !important;
   font-weight: 700;
 }
 .error:hover {
@@ -227,7 +227,7 @@ input.login:focus {
 }
 
 .error::-ms-input-placeholder {
-  color: green !important;
+  color: #ff4242 !important;
   font-weight: 700;
 }
 .error::-ms-input-placeholder:hover {
@@ -235,7 +235,7 @@ input.login:focus {
 }
 
 .error:-ms-input-placeholder {
-  color: green !important;
+  color: #ff4242 !important;
   font-weight: 700;
 }
 .error:-ms-input-placeholder:hover {
@@ -243,7 +243,7 @@ input.login:focus {
 }
 
 .error::-webkit-input-placeholder {
-  color: green !important;
+  color: #ff4242 !important;
   font-weight: 700;
 }
 .error::-webkit-input-placeholder:hover {
@@ -271,7 +271,7 @@ input.login:focus {
   background-color: #c2edfa;
   color: #021a22;
   font-weight: 700;
-  border: 1px solid green;
+  border: 1px solid #ff4242;
 }
 
 div.banner-container {
