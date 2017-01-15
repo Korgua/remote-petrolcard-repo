@@ -6,9 +6,10 @@ $login_form_bg: #fff;
 $login_form_shadow: rgba(0,0,0,0.44);
 $login_user_logo_bg: rgba(120,120,120,.9);
 $login_user_logo_border: $main_color;
-$body_bg: lighten($main_color,10%);
-
-
+$body_bg: #63d1f3;
+//$body_bg: #F06033;
+$login_form_container: lighten($main_color,20%);
+//$login_form_container: transparentize($login_form_bg,.5);
 $warning-color: rgba(255, 66, 66, 1);
 
 a {

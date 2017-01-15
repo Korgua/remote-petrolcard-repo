@@ -38,6 +38,7 @@ input.login:focus{
 	border-color: $main_color !important;
 }
 
+
 .no-tb-padding{
 	padding-top:0 !important;
 	padding-bottom:0 !important;
@@ -50,7 +51,8 @@ input.login:focus{
 
 .user-form-container{
 	@include bRadius(20px);
-	background-color: transparentize($login_form_bg,.6);
+	background-color: $login_form_container;
+	//background-color: #5fcae8;
 	min-height:12em;
 }
 
