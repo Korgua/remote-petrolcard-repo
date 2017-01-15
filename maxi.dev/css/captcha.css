@@ -1,13 +1,8 @@
 .g-recaptcha > div {
   width: 100% !important;
-  background-color: red;
-  text-align: right;
+  text-align: center;
 }
 
 iframe {
   text-align: right;
-}
-
-.rc-anchor-normal-footer {
-  display: none !important;
 }

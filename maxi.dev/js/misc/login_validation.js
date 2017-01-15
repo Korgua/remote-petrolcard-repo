@@ -1,22 +1,24 @@
 $(document).ready(function() {
 	var $login_button = $('a.login.button');
 	$login_button.on('click',function(){
-		var $username = $('.username')
+		var response = grecaptcha.getResponse()
+		,	$username = $('.username')
 		,	$password = $('.password')
 		,	$error = {
-						'name' : false,
-						'pass' : false
+						'name' 		: false,
+						'pass' 		: false,
+						'captcha'	: false
 					};
 		;
 
 		$username.on('focus',function(){
 			$(this).removeClass('error');
-			$('html').trigger('emptyNotification');
+			$('html').trigger('emptyNotification',['login-validation']);
 			$error.name = false;
 		});
 		$password.on('focus',function(){
 			$(this).removeClass('error');
-			$('html').trigger('emptyNotification');
+			$('html').trigger('emptyNotification',['login-validation']);
 			$error.pass = false;
 		});
 
@@ -29,16 +31,18 @@ $(document).ready(function() {
 			$password.addClass('error');
 			$error.pass = true;
 			}
-		if(!$error.pass && !$error.name)
+		if(response.length===0)
+			$error.captcha = true;
+		if(!$error.pass && !$error.name && !$error.captcha){
 			console.log('success');
-			else if($error.pass && $error.name){
-				$('html').trigger('notification',['A név és jelszó megadása kötelező',5000]);
-			}
-			else if($error.pass && !$error.name){
-				$('html').trigger('notification',['A jelszó megadása kötelező',5000]);
-			}
-			else{
-				$('html').trigger('notification',['A név megadása kötelező',5000]);
+		}
+			else {
+				if($error.pass || $error.name){
+					$('html').trigger('notification',['login-validation','A név és jelszó megadása kötelező',10000]);
+				}
+				if($error.captcha){
+					$('html').trigger('notification',['login-validation-captcha','Lehet, hogy robot vagy?',10000]);
+				}
 			}
 	});
 });

@@ -1,22 +1,18 @@
+console.log('alma');
 var notification = (function(){
 	var	$notification_container = prependContainer();
-	function prependTogether(text, timeout){
-		var	$notification_idx = $('.notification_bar').length+1
-		,	$notification_bar = $('<div/>',{class:'notification-bar','data-timeout':timeout,'data-index':$notification_idx})
+	function prependTogether(type, text, timeout){
+		if($('.notification-bar[data-type="'+type+'"]').length>0){
+			emptyContainer(type);
+		}
+
+		var	$notification_idx = $('.notification-bar').length+1
+		,	$notification_bar = $('<div/>',{class:'notification-bar','data-timeout':timeout,'data-type':type,'data-index':$notification_idx})
 		,	$notification_txt = $('<div/>',{class:'notification-text',text:text})
-		//,	$notification_txt = $('<div/>',{class:'notification-text <!-- eleven columns -->',text:text})
-		//,	$close_btn	= $('<div/>',{class:'notification-bar-close <!-- one column -->',text:'x','data-index':$notification_idx})
 		,	$close_btn	= $('<div/>',{class:'notification-bar-close',text:'x','data-index':$notification_idx})
 		,	$pauseable
 		;
 
-		$close_btn.on('click',function(){
-			$(this).parent().slideUp(500);
-			setTimeout(function(){
-				$notification_bar.remove();
-			}, 500);
-		});
-		//$notification_bar.prepend($close_btn);
 		$notification_bar.prepend($notification_txt);
 		$notification_container.append($notification_bar);	
 
@@ -25,12 +21,10 @@ var notification = (function(){
 		},timeout);
 
 		$notification_bar.on('mouseover',function(){
-			console.log('mouseover');
 			clearTimeout($pauseable);
 		});
 
 		$notification_bar.on('mouseout',function(){
-			console.log('mouseout');
 			$pauseable = setTimeout(function(){
 				removeNotificationBar($notification_bar)
 			},timeout);
@@ -50,8 +44,10 @@ var notification = (function(){
 		return $('.notification-container');
 	};
 
-	function emptyContainer(){
-		$notification_container.empty();		
+	function emptyContainer(type){
+		var $used_bar = $('.notification-bar[data-type="'+type+'"]');
+			for(var i=0;i<$used_bar.length;i++)
+				removeNotificationBar($($used_bar[i]));		
 	}
 
 	return {
@@ -62,11 +58,11 @@ var notification = (function(){
 })();
 $('document').ready(function(){
 	$('html')
-		.on('notification',function(event,text,timeout){
-			notification.prep(text,timeout);
+		.on('notification',function(event,type,text,timeout){
+			notification.prep(type,text,timeout);
 		})
-		.on('emptyNotification',function(){
-			notification.empty();
+		.on('emptyNotification',function(event, type){
+			notification.empty(type);
 		})
 		;
 });

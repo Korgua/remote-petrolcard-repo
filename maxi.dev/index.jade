@@ -14,8 +14,8 @@ html(lang="hu")
 		script(type="text/javascript" src="https://www.google.com/recaptcha/api.js")
 		title MaxiLine.hu
 	body
-		div.banner
-			p.banner Petrolcard
+		div.banner-container.banner-shadow
+			div.banner-text Petrolcard.hu
 		div.container
 			div#login
 				//-span#dimension
@@ -23,6 +23,7 @@ html(lang="hu")
 					div.one-third.column
 						div.user-pic-holder.u-full-width
 							img.user-pic(src="images/users/default4.png")
+							
 					div.two-thirds.column.u-pull-right
 						form.login.no-tb-margin(method="post")
 							div.row.login
@@ -31,17 +32,17 @@ html(lang="hu")
 								input.login.no-tb-margin.password.u-full-width(type="password" placeholder="Jelszó")
 							div.row.login
 								a.login.button.button-primary.u-full-width(href="#") Bejelentkezés
-							div.row.login
-								div.g-recaptcha(data-sitekey="6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P")
-								noscript
-									div
-										div(style="width: 302px; height: 422px; position: relative")
-											div(style="width: 302px; height: 422px; position: absolute")
-												iframe(src="https://www.google.com/recaptcha/api/fallback?k=6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none")
-											div(style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;")
-													textarea#g-recaptcha-response.g-recaptcha-response(name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1;margin: 10px 25px; padding: 0px; resize: none;")
 							div.row.login.recover
 								a.recover-password(href="#") Elfelejtett jelszó
+			div.row.login.u-full-width.captcha-container
+				div.g-recaptcha(data-sitekey="6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P")
+				noscript
+					div
+						div(style="width: 302px; height: 422px; position: relative")
+							div(style="width: 302px; height: 422px; position: absolute")
+								iframe(src="https://www.google.com/recaptcha/api/fallback?k=6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none")
+							div(style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;")
+								textarea#g-recaptcha-response.g-recaptcha-response(name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1;margin: 10px 25px; padding: 0px; resize: none;")
 		script(type="text/javascript" src="js/plug/bettr-loggr.js")
 		script(type="text/javascript" src="js/plug/device.js")
 		script(type="text/javascript" src="js/misc/vertical_align.js")

@@ -48,16 +48,11 @@ input[type="button"].button-primary:focus {
 
 .g-recaptcha > div {
   width: 100% !important;
-  background-color: red;
-  text-align: right;
+  text-align: center;
 }
 
 iframe {
   text-align: right;
-}
-
-.rc-anchor-normal-footer {
-  display: none !important;
 }
 
 body {
@@ -131,7 +126,7 @@ input.login:focus {
 }
 
 .error {
-  border: 3px solid red !important;
+  border: 1px solid red !important;
   color: red !important;
   font-weight: 700;
 }
@@ -171,6 +166,7 @@ input.login:focus {
   left: 0;
   right: 0;
   margin: 0 auto;
+  max-width: 600px;
   text-align: center;
   z-index: 9999;
 }
@@ -183,13 +179,27 @@ input.login:focus {
   background-color: #c2edfa;
   color: #021a22;
   font-weight: 700;
+  border: 1px solid red;
 }
 
-div.banner {
+div.banner-container {
   position: fixed;
   width: 100%;
   margin: 0;
   padding: 0;
+  text-align: right;
+  background: #1bbcee;
+}
+div.banner-container.banner-shadow {
+  -webkit-box-shadow: inset 0px -116px 4px -116px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px -116px 4px -116px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -116px 4px -116px rgba(0, 0, 0, 0.75);
+}
+div.banner-container > div.banner-text {
+  margin: 0;
+  padding: 0 1em;
+  font-size: 1.6em;
+  font-weight: 700;
 }
 
 @media (max-width: 499px) {
@@ -200,5 +210,9 @@ div.banner {
   img.user-pic {
     min-width: 45%;
     border-radius: 30%;
+  }
+
+  .captcha-container {
+    width: 100% !important;
   }
 }
