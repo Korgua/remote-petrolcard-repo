@@ -14,6 +14,15 @@ html(lang="hu")
 		script(type="text/javascript" src="https://www.google.com/recaptcha/api.js")
 		title MaxiLine.hu
 	body
+		div.cs-loader
+			div.cs-loader-inner
+				label ●
+				label ●
+				label ●
+				label ●
+				label ●
+				label ●
+
 		div.banner-container.banner-shadow
 			div.banner-text Petrolcard.hu
 		div.container
@@ -33,7 +42,7 @@ html(lang="hu")
 							div.row.login
 								a.login.button.button-primary.u-full-width(href="#") Bejelentkezés
 							div.row.login.recover
-								a.recover-password(href="#") Elfelejtett jelszó
+								a.recover-password(href="#./" onclick="history.pushState(null,'Title','alma.html');") Elfelejtett jelszó
 			div.row.login.u-full-width.captcha-container
 				div.g-recaptcha(data-sitekey="6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P")
 				noscript
@@ -48,4 +57,3 @@ html(lang="hu")
 		script(type="text/javascript" src="js/misc/vertical_align.js")
 		script(type="text/javascript" src="js/misc/login_validation.js")
 		script(type="text/javascript" src="js/misc/notification.js")
-		script(type="text/javascript" src="js/misc/recaptcha_insert_css.js")

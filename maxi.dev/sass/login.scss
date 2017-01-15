@@ -1,5 +1,6 @@
 @import "colors.scss";
 @import "captcha.scss";
+@import "landing.scss";
 
 @mixin bRadius($r){
 	border-radius: $r;
@@ -23,6 +24,7 @@ body{
 	padding: 0;
 	max-height: 100%;
 	max-width: 100%;
+	visibility: hidden;
 }
 
 #login{

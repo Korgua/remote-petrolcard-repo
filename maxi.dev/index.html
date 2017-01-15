@@ -14,6 +14,16 @@
     <title>MaxiLine.hu</title>
   </head>
   <body>
+    <div class="cs-loader">
+      <div class="cs-loader-inner">
+        <label>●</label>
+        <label>●</label>
+        <label>●</label>
+        <label>●</label>
+        <label>●</label>
+        <label>●</label>
+      </div>
+    </div>
     <div class="banner-container banner-shadow">
       <div class="banner-text">Petrolcard.hu</div>
     </div>
@@ -32,7 +42,7 @@
                 <input type="password" placeholder="Jelszó" class="login no-tb-margin password u-full-width">
               </div>
               <div class="row login"><a href="#" class="login button button-primary u-full-width">Bejelentkezés</a></div>
-              <div class="row login recover"><a href="#" class="recover-password">Elfelejtett jelszó</a></div>
+              <div class="row login recover"><a href="#./" onclick="history.pushState(null,'Title','alma.html');" class="recover-password">Elfelejtett jelszó</a></div>
             </form>
           </div>
         </div>
@@ -58,6 +68,5 @@
     <script type="text/javascript" src="js/misc/vertical_align.js"></script>
     <script type="text/javascript" src="js/misc/login_validation.js"></script>
     <script type="text/javascript" src="js/misc/notification.js"></script>
-    <script type="text/javascript" src="js/misc/recaptcha_insert_css.js"></script>
   </body>
 </html>
