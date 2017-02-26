@@ -18,6 +18,10 @@ body{
 	background-color: $body_bg;
 }
 
+.hidden{
+	display:none;
+}
+
 .container{
 	margin:0 auto !important;
 	text-align: center;
@@ -27,7 +31,7 @@ body{
 	visibility: hidden;
 }
 
-#login{
+#login,#recover{
 	width:98%;
 	margin:0 auto;
 	max-width: 40em;
@@ -102,24 +106,25 @@ input.login:focus{
 
 .notification-container{
 	position: fixed;
-	max-width:960px;
-	width:90%;
-	top:0;left:0;right:0;
-	margin:0 auto;
-	max-width:600px;
+	width:100%;
 	text-align:center;
 	z-index: 9999;
+	background-color: rgba(122,122,122, 0.6);
 }
 
 .notification-bar{
 	margin-top:.3em;
-	@include bRadius(10px);
-	font-size:1em;
-	padding:.3em 0;
+	@include bRadius(3px);
+		width:90%;
+	top:0;left:0;right:0;
+	margin:.3em auto;
+	max-width:600px;
+	font-size:.9em;
+	padding:.1em 0;
 	background-color: lighten($main_color,30%);
 	color: darken($main_color,50%);
 	font-weight: 700;
-	border: 1px solid $warning_color;
+	//border: 1px solid $warning_color;
 }
 
 div.banner-container{
@@ -153,4 +158,59 @@ box-shadow: inset 0px -116px 4px -116px rgba(0,0,0,0.75);
 	.captcha-container{
 		width: 100% !important;
 	}
+}
+
+
+@keyframes login {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+}
+
+@-webkit-keyframes login {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+  }
+}
+
+.fade-left {
+  -webkit-animation: login infinite .5s ease-in-out;
+  animation: login infinite  .5s ease-in-out;
+}
+
+@keyframes recover {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes recover {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+}
+
+.fade-from-right {
+  -webkit-animation: recover infinite .5s ease-in-out;
+  animation: recover infinite  .5s ease-in-out;
 }

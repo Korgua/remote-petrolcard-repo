@@ -1,13 +1,13 @@
 $(document).ready(function() {
 	var $login_button = $('a.login.button');
 	$login_button.on('click',function(){
-		var response = grecaptcha.getResponse()
-		,	$username = $('.username')
+		//var response = grecaptcha.getResponse()
+		var	$username = $('.username')
 		,	$password = $('.password')
 		,	$error = {
 						'name' 		: false,
-						'pass' 		: false,
-						'captcha'	: false
+						'pass' 		: false
+						//'captcha'	: false
 					};
 		;
 
@@ -31,18 +31,18 @@ $(document).ready(function() {
 			$password.addClass('error');
 			$error.pass = true;
 			}
-		if(response.length===0)
-			$error.captcha = true;
-		if(!$error.pass && !$error.name && !$error.captcha){
+		/*if(response.length===0)
+			$error.captcha = true;*/
+		if(!$error.pass && !$error.name){//} && !$error.captcha){
 			console.log('success');
 		}
 			else {
 				if($error.pass || $error.name){
-					$('html').trigger('notification',['login-validation','A név és jelszó megadása kötelező',10000]);
+					$('html').trigger('notification',['login-validation','A név és jelszó megadása kötelező',5000]);
 				}
-				if($error.captcha){
+				/*if($error.captcha){
 					$('html').trigger('notification',['login-validation-captcha','Lehet, hogy robot vagy?',10000]);
-				}
+				}*/
 			}
 	});
 });

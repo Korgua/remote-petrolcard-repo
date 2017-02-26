@@ -47,20 +47,35 @@
           </div>
         </div>
       </div>
-      <div class="row login u-full-width captcha-container">
-        <div data-sitekey="6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P" class="g-recaptcha"></div>
-        <noscript>
-          <div>
-            <div style="width: 302px; height: 422px; position: relative">
-              <div style="width: 302px; height: 422px; position: absolute">
-                <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none"></iframe>
+      <div id="recover" class="hidden">
+        <div class="row shadow radius user-form-container">
+          <div class="one-third column">
+            <div class="user-pic-holder u-full-width"><img src="images/users/default4.png" class="user-pic"></div>
+          </div>
+          <div class="two-thirds column u-pull-right">
+            <form method="post" class="login no-tb-margin">
+              <div class="row login">
+                <input type="text" placeholder="Felhasználónév" class="login no-tb-margin username u-full-width">
               </div>
-              <div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
-                <textarea id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1;margin: 10px 25px; padding: 0px; resize: none;" class="g-recaptcha-response"></textarea>
+              <div class="row login"><a href="#" class="login button button-primary u-full-width">E-mail küldése</a></div>
+            </form>
+          </div>
+        </div>
+        <div class="row login u-full-width captcha-container">
+          <div data-sitekey="6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P" class="g-recaptcha"></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative">
+                <div style="width: 302px; height: 422px; position: absolute">
+                  <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LdnyxEUAAAAAEMztQ-dgBq2HoG_J6CkX_pndX4P" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none"></iframe>
+                </div>
+                <div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                  <textarea id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1;margin: 10px 25px; padding: 0px; resize: none;" class="g-recaptcha-response"></textarea>
+                </div>
               </div>
             </div>
-          </div>
-        </noscript>
+          </noscript>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="js/plug/bettr-loggr.js"></script>
@@ -68,5 +83,6 @@
     <script type="text/javascript" src="js/misc/vertical_align.js"></script>
     <script type="text/javascript" src="js/misc/login_validation.js"></script>
     <script type="text/javascript" src="js/misc/notification.js"></script>
+    <script type="text/javascript" src="js/misc/recover_password.js"></script>
   </body>
 </html>

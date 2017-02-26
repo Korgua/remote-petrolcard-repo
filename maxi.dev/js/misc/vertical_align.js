@@ -7,14 +7,17 @@ var const_height = 0;
 var loginVerticalMiddle = function(h,w){
 	device.em();
 	var $login = $('#login')
-	,	$form = $('form.login')
+	,	$recover = $('#recover')
 	;
 	var	$loginWidth = $login.width()
 	,	$loginHeight = $login.height()
 	,	$loginMarginTop = (h-$loginHeight)/2
+	,	$recoverWidth = $recover.width()
+	,	$recoverHeight = $recover.height()
+	,	$recoverMarginTop = (h-$recoverHeight)/2
 	;
-	console.log("h: "+h+", margin-top: "+$loginMarginTop);
-			$login.css('padding-top',$loginMarginTop);
+	$login.css('padding-top',$loginMarginTop);
+	$recover.css('padding-top',$loginMarginTop);
 }
 
 $(window).load(function(){ 
